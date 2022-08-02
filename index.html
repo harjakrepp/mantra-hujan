@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lagu</title>
+	<style>
+		body {
+			text-align: center;
+			background-image: url("img/pantai.jpg");
+			background-size: cover;
+			background-repeat: repeat;
+		}
+		.container {
+			background-image: url("img/transparan.png");
+			border: 1px double black;
+			padding: 0px;
+			height: 245%;
+		}
+		.header {
+			margin: 0%;
+			width: 100%;
+			background-image: url("img/bg-header.jpeg");
+		}
+		.header h1 {
+			width: 16vh;
+			margin: 0%;
+			border-bottom: 2px solid royalblue;
+			padding-top: 3px;
+			padding-left: 6px;
+			font-size: 28px;
+			color: royalblue;
+			text-align: left;
+			font-family: altona;
+			font-weight: bold;
+			animation: ergebe 3s ease infinite forwards;
+		}
+		.header .header-menu {
+			display: flex;
+		}
+		.header-menu p {
+			display: flex;
+			font-family: altona;
+			color: white;
+			font-size: 10px;
+			font-weight: bold;
+			margin: 0%;
+			padding: 4px;
+			padding-right: 0px;
+			margin-top: 3px;
+		}
+		.header-menu h2 {
+			display: flex;
+			font-family: typographica;
+			color: skyblue;
+			font-size: 16px;
+			margin: 0%;
+			padding: 4px;
+		}
+		.header .header-menu h6 {
+			line-height: 20px;
+			margin-top: 0%;
+			margin-right: 3%;
+			margin-bottom: 1%;
+			margin-left: 40%;
+			border: 1.5px solid royalblue;
+			border-radius: 4px;
+			font-size: 10px;
+			padding: 3px;
+			font-family: altona;
+			color: white;
+			background-color: ;
+			width: 54px;
+			height: 14px;
+		}
+		.runningtext marquee {
+			width: 100%;
+			height: 20px;
+			margin: 0%;
+			font-family: pink chicken;
+			font-weight: thin;
+			color: #030045;
+			background: #0065FF;
+			animation: koboo 5s ease infinite forwards;
+		}
+		.main h3 {
+			margin-bottom: 3px;
+			font-family: altona;
+			color: white;
+		}
+		.main .artist {
+			display: inline-block;
+			border: 2px double #00DCF8;
+			width: 120px;
+			margin: none;
+		}
+		.main .artist img {
+			text-align: center;
+			width: 24px;
+			animation: zoom 3s ease 1 forwards;
+			animation-delay: 0.8s;
+		}
+		.main .artist h2 {
+			margin: 1px;
+			font-size: 18px;
+			border-top: 2px double #00DCF8;
+			background: maroon;
+			font-family: pink chicken;
+			animation: kobo 3s ease 1 forwards;
+		}
+		.main audio {
+			width: 30vh;
+			height: 4vh;
+		}
+		.main .lyrics {
+			display: inline-block;
+			border: 2px solid red;
+			border-radius: 6vh;
+			width: 40vh;
+			animation: rgb-solid-border 4s ease infinite forwards;
+		}
+		.main .lyrics h3 {
+			margin-top: 12px;
+			font-family: altona;
+			color: #0085FF;
+		}
+		.main .lyrics h5 {
+			margin-bottom: 1vh;
+			margin-top: 0%;
+			font-size: 10px;
+			font-family: altona;
+			color: white;
+		}
+		.main .lyrics h6 {
+			padding-bottom: 0%;
+			margin-bottom: 0%;
+			font-size: 14px;
+			font-family: altona;
+			color: cyan;
+		}
+		.main .lyrics p {
+			color: skyblue;
+			font-family: pink chicken;
+			padding: 0%;
+			font-size: 13px;
+			margin: 0%;
+		}
+		.main .lyrics .kobomuter img {
+			width: 9vh;
+		}
+		.footer {
+			margin: 0%;
+			margin-bottom: 0%;
+			margin-top: 4%;
+			background: #00101E;
+			text-align: left;
+			border: 1.5px double skyblue;
+			border-radius: 25px 25px 0px 0px;
+			animation: rgb-double-border 3s ease infinite forwards;
+		}
+		.footer h3 {
+			margin: 0%;
+			border: 0%;
+			padding: 3%;
+		}
+		.footer h5 {
+			border-left: 8px solid #00101E;
+			margin: 0%;
+			padding: 2px;
+			font-family: altona;
+			font-size: 12px;
+			color: #F1F1F1;
+		}
+		.footer h5 a {
+			text-decoration: none;
+			color: skyblue;
+		}
+		.kopirek {
+			margin: 0%;
+			padding: 0%;
+			background-color: black;
+		}
+		.kopirek h4 {
+			line-height: 30px;
+			text-align: center;
+			color: #F1F1F1;
+			font-size: 12px;
+			font-weight: bold;
+			font-family: codeNewRoman;
+			margin: 0%;
+			border: 0%;
+			padding: 0%;
+		}
+		.kopirek p {
+			font-family: altona;
+			text-align: center;
+			font-size: 8px;
+			color: #F1F1F1;
+			margin: 0%;
+			padding-bottom: 3%;
+			border-bottom: 2px solid royalblue;
+			border: 0%;
+			border-radius: 0px;
+			padding: 0%;
+		}
+		/*untuk memanggil/menambahkan font*/
+		@font-face {
+			font-family: codeNewRoman;
+			src: url('font/code-new-roman.otf') format('truetype');
+		}
+		@font-face {
+			font-family: typographica;
+			src: url('font/typographica.otf') format('truetype');
+		}
+		@font-face {
+			font-family: altona;
+			src: url('font/altona-sans.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: Pink Chicken;
+			src: url('font/pink_chicken.ttf') format('truetype');
+		}
+		/*keyframes/animasi*/
+		@keyframes zoom {
+			0% {width: 24px;}
+			100% {width: 120px;}
+		}
+		@keyframes kobo {
+			0% {color: blue;}
+			50% {color: royalblue;}
+			100% {color: white;}
+		}
+		@keyframes koboo {
+			0% {color: white;}
+			25% {color: #000750;}
+			50% {color: skyblue;}
+			75% {color: #000750;}
+			100% {color: white;}
+		}
+		@keyframes ergebe {
+			0% {color: red;}
+			25% {color: orange;}
+			50% {color: yellow;}
+			75% {color: green;}
+			100% {color: blue;}
+		}
+		@keyframes rgb-solid-border {
+			0% {border: 2px solid royalred;}
+			25% {border: 2px solid orange;}
+			50% {border: 2px solid skyblue;}
+			75% {border: 2px solid green;}
+			90% {border: 2px solid blue;}
+			100% {border: 2px solid purple;}
+		}
+		@keyframes rgb-double-border {
+			0% {border: 2px double royalred;}
+			25% {border: 2px solid orange;}
+			50% {border: 2px double skyblue;}
+			75% {border: 2px double green;}
+			90% {border: 2px double blue;}
+			100% {border: 2px double purple;}
+		}
+	</style>
+	<script type="text/javascript">
+	function displayTime() {
+		var clientTime=new Date();
+		var time=new Date(clientTime.getTime());
+		var sh=time.getHours().toString();
+		var sm=time.getMinutes().toString();
+		var ss=time.getSeconds().toString();
+		document.getElementById("time").innerHTML=
+		(sh.length==1?"0"+sh:sh)+":"+(sm.length==1?"0"+sm:sm)+":"+(ss.length==1?"0"+ss:ss);
+	}
+	</script>
+</head>
+<body onload="setInterval('displayTime()', 1000);">
+	<div class="container">
+		<div class="header">
+			<h1>Let's Sing</h1>
+			<div class="header-menu">
+				<p>With</p>
+				<h2>Kobo Kanaeru</h2>
+				<h6 id="time"></h6>
+			</div>
+		</div>
+		<div class="runningtext">
+			<marquee>Karaoke With Kobo(≧▽≦)</marquee>
+		</div>
+		<div class="main">
+			<h3>Artist : </h3>
+			<div class="artist">
+				<img src="img/kobofull.png"></img>
+				<h2>Kobo Kanaeru</h2>
+			</div>
+			<h3>Song : </h3>
+			<audio controls>
+				<source src="song/【Original Song】Mantra Hujan - Kobo Kanaeru.mp3">
+			</audio>
+			<h3>Instrumental : </h3>
+			<audio controls>
+				<source src="song/【Instrumental】Mantra Hujan - Kobo Kanaeru.mp3">
+			</audio>
+			<h3>Lyrics : </h3>
+			<div class="lyrics">
+				<h3>Mantra Hujan</h3>
+				<h5>By : Kobo Kanaeru</h5>
+				
+<h6>[Intro]</h6><br>
+<p>
+Rapalkan mantra<br>
+Kilau cahaya<br>
+Sinari dunia<br>
+</p>
+<h6>[Verse 1]</h6><br>
+<p>
+Sunyi dan sepi<br>
+Di ruang hampa<br>
+Masalah datang dan pergi sudah biasa<br>
+(Haa)<br>
+Sendiri lagi<br>
+Enggan untuk melangkah<br>
+Kubuka mata<br>
+Menatap langit<br>
+Rintik hujan bergema<br>
+Genangi bentala (Haa)<br>
+Seakan membisik<br>
+Ayo jelajahi dunia<br>
+</p>
+<h6>[Pre-Chorus]</h6><br>
+<p>
+Melamunkan berbagai angan<br>
+Tak akan selesaikan masalah<br>
+Beranikan diri untuk melangkah<br>
+Terobos segala rintangan<br>
+</p>
+<h6>[Chorus]</h6><br>
+<p>
+Walau hujan tak kunjung berhenti<br>
+Masih ada aku temanimu disini<br>
+Rapalkan mantra datangkan cahaya<br>
+Tuk sinari hari harimu<br>
+Hilangkan semua rasa ragu<br>
+Yang selimuti hati pikiran dan emosi<br>
+Rapalkan mantra datangkan cahaya<br>
+Buka lembaran yang baru<br>
+</p>
+<h6>[Outro]</h6><br>
+<p>
+"Bokobokobokobo... Kobo Kanaeru at your service!<br>
+Let me be your sun to shine your day!"<br>
+<br>
+</p>
+<h6>[End]</h6>
+<div class="kobomuter">
+	<marquee direction="right" behavior="alternate">
+		<img src="img/koboo.gif">
+	</marquee>
+</div>
+<p>kobokobokobokobokobo... ehekk</p>
+<br>
+				
+			</div>
+			<div class="footer">
+				<h3>Credits</h3>
+				<h5>Creator : <a href="https://youtube.com/channel/UC2gkospai3qUTO93xXe02qA"">Harjakrepp</a></h5>
+				<h5>Artist : <a href="https://youtube.com/channel/UCjLEmnpCNeisMxy134KPwWw">Kobo Kanaeru</a></h5>
+			</div>
+			<div class="kopirek">
+					<h4>©Copyright Harjakrepp</h4>
+					<p>Made with Love ♡‿♡</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
